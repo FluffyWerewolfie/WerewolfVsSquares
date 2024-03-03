@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week2 </title>
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+<body onkeypress="player_input(event);" contenteditable="enabled" >
+    <section id="landing">
+        <nav>
+            <ul>
+                <li id="currency" style="flex-grow:6"><img src="./img/OIG - 2023-09-30T023855.827.jpg"/><span id="bank_account"></span></li>
+                <li id="hitpoints"style="flex-grow:0"><span id="clearhp">100</span><span>%</span><img id="heart1" src="./img/cheart.jpg"/><img id="heart2" src="./img/cheart.jpg"/><img id="heart3" src="./img/cheart.jpg"/><img id="heart4" src="./img/cheart.jpg"/><img id="heart5" src="./img/cheart.jpg"/></li>
+                <li id="stats_display" style="flex-grow:3">Level: 1</li>
+                <li id="inventory" style="flex-grow:1"><span>Inventory</span><div id="inventory_display"><ul>
+                        <li id="inv_common" onclick="aesthetic_activator(this.id)" class="inventory_rarity_menu">
+                            <span>Common</span>
+                            <div class="inactive" id="common_show">
+                                <img id="uwu3232" src="./img/OIG (24).jpg" class="" alt="" onclick="aesthetic_activator(this.id)">
+                                
+                            </div>  
+                        </li>
+                        <li id="inv_rare" onclick="aesthetic_activator(this.id)">
+                            <span>Rare</span>
+                            <div class="inactive" id="rare_show">
+                                <h1>test_item_rare</h1>
+                        </div> 
+                        </li>
+                        <li id="inv_epic" class ="" onclick="aesthetic_activator(this.id)">
+                            <span>Epic</span>
+                            <div class="inactive" id="epic_show">
+                                <h1>test_item_epic</h1>
+                        </div>
+                        </li>
+                        <li id="inv_legendary" onclick="aesthetic_activator(this.id)">
+                            <span>Legendary</span>
+                        <div class="inactive" id="legendary_show"> 
+                            <h1>test_item_legendary</h1>
+                        </div> 
+                        </li>
+                    </ul></div>
+                </li>
+                <li id="gacha_shop" style="flex-grow:0"><span>Werewolf Gacha Heaven</span></li>
+            </ul>
+        </nav>
+        <div>   
+        <p id="devtest1">You can move with w a s d! Or make extra cool movements with h j k l<br>
+            Type the numbers from 1 to 0 to activate your item's passives! (can be clicked also)<br>
+            Press t to make the help message dissapear or appear as you need. Beware of capslock...
+        </p></div>
+        <div class="title">
+            <div id="safe_zone">
+            </div>
+            <p id="ratio"></p>
+        </div>
+        <button id="playable_werewolf" ></button>
+        <div id="threat_zone"></div>
+        <div id="form_contact_show" class="inactive">
+           ><form  action="./server/form.php">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="contactname" placeholder="Your name..">
+        
+            <label for="email">Your email address</label>
+            <input type="email" id="email" name="contactemail" placeholder="Email@email.com">
+        
+            <label for="reason">Country</label>
+            <select id="reason" name="contactreason">
+              <option value="JobOffer">Job Offer!</option>
+              <option value="Feedback">Feedback</option>
+              <option value="Other">other</option>
+            </select>
+            <label for="textarea">Your words of love</label>
+            <textarea id="textarea" name="contactext">Every word counts</textarea>
+            <input type="submit" value="Submit">
+           </form> 
+        </div>
+        <div id="death_screen" class="">
+            <div class="div1"><h1>You have died!</h1> </div>
+            <div class="div2" id="stat_breakdown_death"><h1>Your stats for this run!</h1>  </div>
+            <div class="div3"> <h1>Your score will unlock some of my projects!</h1> <h3>You can now either choose to play again to unlock more projects. Or you can choose to leave your fluffy mortal body and go forth exploring my other creations!</h3> </div>
+            <div class="div4" id="explain"> <h1>You have died!</h1> </div>
+            <div class="div5"><h1>Check out my other projects!</h1>  </div>
+            <div class="div6"> <h1>Arrow Left</h1> </div>
+            <div class="div7"><a href="#link1clicked" id="portfolio_link1" class="score_gating">Link 1!<img src="img/download (34).jpg"></a>  </div>
+            <div class="div8"> <a href="#link2clicked" id="portfolio_link2" class="score_gating">Link 2!<img src="img/download (34).jpg"></a> </div>
+            <div class="div9"><a href="#link3clicked" id="portfolio_link3" class="score_gating" >Link 3!<img src="img/download (34).jpg"></a>  </div>
+            <div class="div10"><a href="#link4clicked" id="portfolio_link4" class="score_gating">Link 4!<img src="img/download (34).jpg"></a> </div>
+            <div class="div11"> <h1>Arrow right</h1> </div>
+            <div class="div12"> <h1>Reset Button</h1><button onclick="reset_function()">Play again!</button> <h1>Or give me a job!</h1> <button onclick="omg_they_want_to_hire_me()">Contact me!</button></div>
+        </div>
+        <div class="items">
+            <button class=""  id="item_1" onclick="item_activator(this.id)">1</button>
+            <button id="item_2" onclick="item_activator(this.id);">2</button>
+            <button id="item_3" onclick="item_activator(this.id);">3</button>
+            <button id="item_4" onclick="item_activator(this.id);">Test Item 4<img src="img/OIG (22).jpg"/></button>
+            <button id="item_5" onclick="item_activator(this.id);">5</button>
+            <button id="item_6" onclick="item_activator(this.id);">6</button>
+            <button id="item_7" onclick="item_activator(this.id);">7</button>
+            <button id="item_8" onclick="item_activator(this.id);">8</button>
+            <button id="item_9" onclick="item_activator(this.id);">9</button>
+            <button id="item_10" onclick="item_activator(this.id);">10</button>
+        </div>
+    </section>
+
+  <!--  <section id="aboutUs">
+        <div class="grid">
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor totam praesentium, unde sunt omnis odio repudiandae beatae a architecto soluta nostrum facere voluptatibus ex id repellendus expedita suscipit dicta nam.</div>
+            <div class="item">Tempore asperiores ipsa natus ab saepe in dolore, voluptate, temporibus facilis itaque deleniti repudiandae labore ipsum magni architecto inventore excepturi laudantium fugit ratione molestias ut debitis quia possimus. Quae, repudiandae.</div>
+            <div class="item">Assumenda sit error voluptatem non aperiam accusamus at sunt illum quis provident facere fugit nesciunt perferendis temporibus quaerat distinctio repellat ex laboriosam neque consectetur cupiditate dolores, ducimus labore! Quisquam, aperiam.</div>
+            <div class="item">Nobis sunt totam dolor qui quis officiis commodi excepturi fugit unde. Harum consequatur reiciendis quam omnis doloremque, enim ut molestiae quasi eius officia rerum consectetur corporis dicta animi porro distinctio?</div>
+            <div class="item">Vitae ad expedita nulla earum quisquam doloremque accusamus dignissimos minus perferendis placeat aliquid sequi sint esse nostrum corporis ullam accusantium vero, et neque laudantium quam. Non itaque fugit adipisci consequuntur?</div>
+            <div class="item">Praesentium, optio illum, doloremque earum iusto eos error repellat incidunt suscipit veniam libero omnis dicta temporibus sapiente distinctio voluptatum sunt? Ipsam iure dolorum nobis consequatur, voluptatum temporibus repellat inventore dignissimos.</div>
+        </div> 
+    </section> -->
+    <script src="scripts/player_control.js"></script>
+    <script>
+        (function(){
+            //self call function - write the actual landing of the page.
+            //make a reseter and ready to play button, maybe have display none first and change after?
+            //would be useful for both the first load and player deaths.
+            //it's 3 am :c I need some fluffy werewolf hugs TwT
+        })();
+    </script>
+</body>
+</html>
